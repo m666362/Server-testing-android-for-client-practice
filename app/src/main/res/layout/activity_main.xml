@@ -1,100 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name : "/>
+            android:text="Id : " />
+
         <EditText
+            android:id="@+id/objectIdEt"
+            android:hint="Put/Delete Id"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter Name"
-            android:id="@+id/nameEditTextxml"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Address : "/>
+            android:text="Name : " />
+
         <EditText
+            android:id="@+id/nameEditTextxml"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Address"
-            android:id="@+id/addressEditTextxml"/>
+            android:hint="Enter Name" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address : " />
+
+        <EditText
+            android:id="@+id/addressEditTextxml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Address" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/postButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="postbutton"
-            android:text="Post"
-            android:id="@+id/postButton"/>
+            android:text="Post" />
+
         <Button
+            android:id="@+id/getButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="getbutton"
-            android:text="Get"
-            android:id="@+id/getButton"/>
+            android:text="Get" />
+
         <Button
+            android:id="@+id/putButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="putbutton"
-            android:text="Put"
-            android:id="@+id/putButton"/>
+            android:text="Put" />
+
         <Button
+            android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="deletebutton"
-            android:text="Delete"
-            android:id="@+id/deleteButton"/>
+            android:text="Delete" />
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
+
+
+    <TextView
+        android:id="@+id/nameFromJson"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:text="Name : "
+        android:textIsSelectable="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/nameFromJson"
-            android:text="Name : "/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/addressFromJson"
-            android:text="Name : "/>
+    <TextView
+        android:id="@+id/addressFromJson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address : " />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/idFromJson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:text="Id : " />\
+
+    <TextView
+        android:id="@+id/responseFromJson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Response : "
+        android:textIsSelectable="true" />
 
 </LinearLayout>
